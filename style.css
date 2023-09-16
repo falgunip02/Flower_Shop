@@ -1,0 +1,633 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.3%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(255, 52, 153, .05);
+}
+
+.heading span{
+    color: palevioletred;
+}
+
+.btn{
+        
+        
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-weight: 500;
+        color: #fff;
+        background: #333;
+        border: none;
+        border-radius: 3rem;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+        display: inline-block;
+        padding: .9rem 3.5rem;
+        cursor: pointer;
+        font-size: 1.7rem;
+    
+      }
+      
+      .btn:hover {
+        background-color: palevioletred;
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        color: #fff;
+        transform: translateY(-7px);
+      }
+      
+      .btn:active {
+        transform: translateY(-1px);
+      }
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0, .1);
+}
+
+header .logo{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #333;
+}
+
+header .logo span{
+    color: palevioletred
+}
+
+header .navbar a{
+    color: #666;
+    font-size: 2rem;
+    padding: 0 1.5rem;
+
+}
+
+header .navbar a:hover{
+    color: palevioletred;
+}
+
+header .icons a{
+    font-size: 2.2rem;
+    color: #333;
+    margin-left: 1.5rem;
+
+}
+
+header .icons a:hover{
+    color: palevioletred;
+}
+
+header #toggler{
+    display: none;
+
+}
+
+header .fa-bars{
+    color: #333;
+    font-size: 3rem;
+    border-radius: .3rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    display: none;
+
+}
+
+
+
+
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+        
+    }
+
+    header{
+        padding: 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+
+    .home{
+        background-position: left;
+    }
+}
+
+
+@media (max-width:768px){
+    html .fa-bars{
+        display: block;
+        
+        
+    }
+
+    header .navbar{ 
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #eee;
+        border-top:.1rem solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);  
+    }
+
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border-top:.1rem solid rgba(0, 0, 0, .1);
+        display: block;
+    }
+
+    .home.content{
+        font-size: 5rem;
+    }
+
+    .home.content span{
+        font-size: 2.5rem;
+    }
+}
+
+.icons-container .icons h3{
+    font-size: 1.5rem;
+
+}
+
+.icons-container .icons span{
+   
+    font-size: 1.3rem;
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%
+        
+    }
+
+    .heading{
+        font-size:3rem ;
+    }
+
+    header{
+        padding: 2rem;
+    }
+}
+
+
+@media (max-width:768px){
+    html .fa-bars{
+        display: block;
+        
+        
+    }
+}
+
+
+
+
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(https://images.unsplash.com/photo-1580770768125-dc5af5fadd1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80) no-repeat;
+    background-size: cover;
+    background-position:center ;
+}
+
+.home .content{
+    max-width: 50rem;
+   
+}
+
+.home .content h3{
+    font-size: 6rem;
+    color: #333;
+
+}
+
+.home .content span{
+    font-size: 3.5rem;
+    color: palevioletred;
+    padding: 1rem 0;
+    line-height: 1.5;   
+}
+
+.home .content p{
+    font-size: 1.5rem;
+    color: #999;
+    padding:1rem 0;
+    line-height: 1.5;   
+}
+
+.about .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+
+}
+
+.about .row .video-container{
+    flex: 1 1 40rem;
+    position: relative;
+
+}
+
+.about .row .video-container video{
+    width: 100%;
+    border: 1.5rem solid;
+    border-radius: .5rem;
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0, .1);
+    height: 100%;
+    object-fit: cover;
+
+}
+
+
+.about .row .video-container h3{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: #333;
+    background: #fff;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: color-dodge
+
+}
+
+
+.about .row .content{
+    flex: 1 1 40rem;
+}
+
+
+.about .row .content h3{
+   color: #333;
+    font-size: 3rem;
+}
+
+.about .row .content p{
+    font-size: 1.5rem;
+    color: #999;
+    padding: .5rem 0;
+    padding-top: 1rem;
+
+}
+.about .row .content .btn{
+    padding-top: 1.5rem;
+}
+
+.icons-container{
+    background: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+     
+}
+
+.icons-container img{
+    width: 50px; /* Set the desired width for the icons */
+    height: 5rem; /* Automatically adjust the height to maintain aspect ratio */
+    margin-right: 2rem; /* Add spacing between icons (adjust as needed) */
+
+}
+
+.icons-container .icons{
+    background: #fff;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex: 1 1 25rem;
+    box-shadow: 0.5rem .5rem rgba(0, 0, 0, .1);;
+}
+
+.icons-container .icons h3{
+    color: #333;
+    padding-bottom: .5rem;
+    font-size: 1.5rem;
+
+}
+
+.icons-container .icons span{
+    color: #555;
+    font-size: 1.3rem;
+}
+
+/* Apply styling to the entire section */
+.products {
+    background-color: #f8f8f8; /* Background color */
+    padding: 100px; /* Add some padding for spacing */
+}
+
+/* Style the heading */
+.heading {
+    text-align: center; /* Center align the text */
+    font-size: 50px; /* Adjust font size */
+    color: #333; /* Text color */
+}
+
+.heading span {
+    color: #ff6b6b; /* Color for the "products" span */
+}
+
+/* Style the box container */
+.box-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow boxes to wrap to the next line if there's not enough space */
+    justify-content: center; /* Center align boxes horizontally */
+    gap: 50px; /* Add space between boxes */
+}
+
+/* Style individual boxes */
+/* Style discount labels */
+.discount {
+    background-color: palevioletred; /* Background color for discount labels */
+    color: #fff; /* Text color for discount labels */
+    padding: 5px 10px; /* Add padding to labels */
+    font-weight: bold; /* Make the text bold */
+    position: absolute; /* Position labels absolutely within the box */
+    top: 10px; /* Adjust the top position */
+    left: 10px; /* Adjust the left position */
+    z-index: 1; /* Ensure the label appears above the image */
+    border-radius: .5rem;
+}
+
+/* Style individual boxes */
+.box {
+    background-color: #fff; /* Background color for each box */
+    border: 1px solid #ddd; /* Border around each box */
+    padding: 50px; /* Add padding inside each box */
+    text-align: center; /* Center align text and content */
+    width: 300px; /* Set a fixed width for each box */
+    position: relative; /* Set the box as a reference for absolute positioning */
+    box-shadow:  0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border-radius: 2rem;
+}
+
+
+/* Style images within boxes */
+.image img {
+    max-width: 100%; /* Ensure images don't exceed their original dimensions */
+    height: 200px; /* Maintain aspect ratio */
+}
+
+/* Style product titles */
+h3 {
+    font-size: 15px; /* Adjust font size for product titles */
+    margin: 10px 0; /* Add some margin for spacing */
+}
+
+/* Style price */
+.price {
+    font-size: 18px; /* Adjust font size for prices */
+    font-weight: bold; /* Make the text bold */
+}
+
+.price span {
+    color: #999; /* Color for the original price */
+    text-decoration: line-through; /* Add a strike-through for the original price */
+}
+
+.products .box-container .box:hover .image img{
+    transform: scale(.9);
+}
+
+.products .box-container .box .image .icons{
+    position: absolute;
+    bottom: -2rem; left: 0; right: 0;
+    display: flex;
+}
+
+.products .box-container .box:hover .image .icons{
+    bottom: 0;
+}
+
+.products .box-container .box .image .icons a{
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width: 50%;
+    background: palevioletred;
+    color: #fff;
+
+}
+
+.products .box-container .box .image .icons .cart-btn{
+    border-left: .1rem solid #fff7;
+    border-right: .1rem solid #fff7;
+    width: 90%;
+
+}
+
+.products .box-container .box .image .icons a:hover{
+    background: #333;
+}
+
+.products .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+
+}
+
+.products .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: #333;
+
+}
+
+.products .box-container .box .content .price{
+    font-size: 2.5rem;
+    color: palevioletred;
+    font-weight: bolder;
+    padding-top: 1rem;
+
+}
+
+.products .box-container .box .content .price span{
+    font-size: 1.5rem;
+    color: #999;
+    font-weight: lighter;
+    text-decoration: line-through;
+    
+    
+}
+
+.review .box-container .box{
+    flex: 1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    padding: 3 rem 2 rem;
+    position: relative;
+    border: .1rem solid;
+}
+
+.review .box-container .box .fa-quote-right{
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: 6rem;
+    color: #eee;
+}
+
+.review .box-container .box .user{
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+
+}
+
+/* Style stars */
+.review .box-container .box .stars .fas {
+    color: palevioletred; /* Change color as needed */
+    font-size: 2rem;
+}
+
+
+.review .box-container .box p{
+    line-height: 1.5;
+    padding-top: 2rem;
+}
+
+.review .box-container .box .user img{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.review .box-container .box .user h3{
+    font-size: 2rem;
+    color: #333;
+
+}
+
+.review .box-container .box .user span{
+    font-size: 1.5rem;
+    color: #999;
+}
+
+/* Style the contact section */
+.contact {
+    background-color: FFB6C1; /* Light pink background */
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* Style the heading */
+.contact .heading {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact .heading span {
+    color: palevioletred; /* Pink color for the span */
+}
+
+/* Style the form container */
+.contact .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style form input fields */
+.contact .box {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ffcccc; /* Light pink border */
+    border-radius: 8px;
+    font-size: 18px;
+    background-color: #fff0f0; /* Light pink background */
+}
+
+/* Style the message textarea */
+.contact textarea.box {
+    resize: vertical;
+    min-height: 150px;
+    margin-bottom: 20px;
+}
+
+/* Style the submit button */
+.contact .btn {
+    background-color: black; /* Pink button background */
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+}
+
+.contact .btn:hover {
+    background-color: palevioletred; /* Darker pink on hover */
+}
+
+/* Style the contact image */
+.contact .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
